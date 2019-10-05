@@ -1,2 +1,7 @@
 #Case 1
-#once more
+
+def triangle():
+
+def square():
+
+def rombus():
