@@ -38,4 +38,8 @@ left(120)
 forward(100)
 hideturtle()
 
+penup()
+goto(-100,-100)
+pendown()
+circle(30)
 done()
