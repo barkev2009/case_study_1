@@ -50,7 +50,7 @@ def triangle(position_x1, position_y1, position_x2, position_y2, position_x3, po
     :return: None
     '''
     tr = Turtle()
-    tr.speed(1)
+    tr.speed(10)
     # setting the pen position
     tr.penup()
     tr.goto(position_x1, position_y1)
@@ -81,27 +81,6 @@ def triangle_perf(side, position_x, position_y, rotation_angle=0):
     tri.forward(side)
 
 
-square(60, -30, -30 + 80, rotation=45)
-triangle(-20, 50, -40, 30, 70, -15)
-triangle_perf(20, 200, 200, rotation_angle=90)
-
-done()
-
-
-
-
-def triangle():
-    # TODO: (Anna)
-    pass
-
-def square():
-    # TODO: (Julia)
-    pass
-
-def rombus():
-    # TODO: (Greg)
-    pass
-
 
 
 
@@ -114,5 +93,12 @@ end_fill()
 
 
 
+#Creation of the fish
+square(42, 200, 200, rotation=45)
+triangle(295, 200, 235, 230, 235, 170)
+triangle(230, 210, 230, 270, 170, 270)
+triangle(230, 190, 230, 130, 170, 130)
+triangle(165, 200, 135, 200, 135, 170)
+triangle(130, 170, 130, 200, 100, 170)
 
 done()
