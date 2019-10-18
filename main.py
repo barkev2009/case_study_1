@@ -7,15 +7,15 @@ import math
 
 
 def square(side, position_x, position_y, fig_color='black', rotation=0):
-    '''
+    """
     Function, drawing square.
     :param position_x: coordinate x in the middle of the square
     :param position_y: coordinate y in the middle of the square
+    :param fig_color: color of the figure
     :param side: side length of a square
-    :param fig_color: fills the figure with the selected color
-    :param rotation: the rotation angle that determines the position of the figure
+    :param rotation: additional rotation angle
     :return: None
-    '''
+    """
     sq = Turtle()
     sq.speed(0)
     sq.hideturtle()
@@ -45,7 +45,7 @@ def square(side, position_x, position_y, fig_color='black', rotation=0):
 
 
 def triangle(position_x1, position_y1, position_x2, position_y2, position_x3, position_y3, fig_color='black'):
-    '''
+    """
     Function, drawing triangle.
     :param position_x1: coordinate x1 shows position of the first point horizontally
     :param position_y1: coordinate y1 shows position of the first point vertically
@@ -53,9 +53,9 @@ def triangle(position_x1, position_y1, position_x2, position_y2, position_x3, po
     :param position_y2: coordinate y2 shows position of the second point vertically
     :param position_x3: coordinate x3 shows position of the third point horizontally
     :param position_y3: coordinate y3 shows position of the third point vertically
-    :param fig_color: fills the figure with the selected color
+    :param fig_color: color of the figure
     :return: None
-    '''
+    """
     tr = Turtle()
     tr.speed(10)
     tr.hideturtle()
@@ -75,16 +75,16 @@ def triangle(position_x1, position_y1, position_x2, position_y2, position_x3, po
     tr.penup()
 
 
-def triangle_perf(side, position_x, position_y, fig_color='black', rotation_angle=0):
-    '''
-    Function, drawing triangle.
-    :param side: side length of a perfect triangle
-    :param position_x: coordinate x in the middle of the perfect triangle
-    :param position_y: coordinate y in the middle of the perfect triangle
-    :param fig_color: fills the figure with the selected color
-    :param rotation_angle: the rotation angle that determines the position of the figure
+def triangle_right_isosceles(side, position_x, position_y, fig_color='black', rotation_angle=0):
+    """
+    The function of drawing the right triangle, which is also isosceles (has two identical sides).
+    :param side: the isosceles side of the right-angled triangle
+    :param position_x: x-coordinate of the right angle
+    :param position_y: y-coordinate of the right angle
+    :param fig_color: the color of the figure
+    :param rotation_angle: the rotation angle of the triangle (rotates around the right angle)
     :return: None
-    '''
+    """
     tri = Turtle()
     tri.speed(0)
     tri.hideturtle()
@@ -92,37 +92,36 @@ def triangle_perf(side, position_x, position_y, fig_color='black', rotation_angl
 
     # setting the pen position
     tri.penup()
-    tri.setheading(90)
+    tri.setheading(-135)
     tri.goto(position_x, position_y)
     tri.right(rotation_angle)
-    tri.fd(math.sqrt(3) / 3 * side)
     tri.pendown()
 
     # actually drawing the triangle
     tri.begin_fill()
-    tri.right(150)
     tri.forward(side)
-    tri.right(120)
-    tri.forward(side)
-    tri.right(120)
+    tri.left(135)
+    tri.forward(math.sqrt(side**2 + side**2))
+    tri.left(135)
     tri.forward(side)
     tri.end_fill()
     tri.penup()
 
 
-def parallelogram(position_x, position_y, side_horiz, side_angled, paral_angle, fig_color='black', rotation_angle=0):
-    '''
-    Function, drawing triangle.
-    :param position_x: upper left coordinate x
-    :param position_y: upper left coordinate y
-    :param side_horiz: lenght of the horizontal line of the parallelogram
-    :param side_angled: lenght of the line at an angle
-    :param fig_color: fills the figure with the selected color
-    :param rotation_angle: the rotation angle that determines the position of the figure
+def parallelogram(x, y, side_horiz, side_angled, paral_angle, fig_color='black', rotation_angle=0):
+    """
+    The function of drawing the parallelogram with given sides, angle, its position and whether it should be rotated.
+    :param x: x-coordinate of the low-left angle
+    :param y: y-coordinate of the low-left angle
+    :param side_horiz: the horizontal side of the figure
+    :param side_angled: the adjacent side
+    :param paral_angle: the degree of the low-left angle between two sides
+    :param fig_color: the figure's color
+    :param rotation_angle: the angle of figure's rotation (rotates around the low-left angle)
     :return: None
-    '''
+    """
     par = Turtle()
-    par.speed(1)
+    par.speed(0)
     par.hideturtle()
     par.color(fig_color)
 
@@ -145,16 +144,16 @@ def parallelogram(position_x, position_y, side_horiz, side_angled, paral_angle, 
     par.penup()
 
 
-'''Creation of the fish'''
-square(42, 200, 200, rotation=45, fig_color='orange red')
-triangle(295, 200, 235, 230, 235, 170, 'deep sky blue')
-triangle(230, 210, 230, 270, 170, 270, 'red')
-triangle(230, 190, 230, 130, 170, 130, 'yellow')
-triangle(165, 200, 135, 200, 135, 170, 'violet')
-triangle(130, 170, 130, 200, 100, 170, 'dark violet')
-parallelogram(100, 235, 44, 35, 45, rotation_angle=-45, fig_color='lawn green')
+'''Creation of fish'''
+square(42, 200, 150, rotation=45, fig_color='orange red')
+triangle_right_isosceles(88, 233, 241, 'red', 45)
+triangle_right_isosceles(40, 126, 148, 'violet', -45)
+triangle_right_isosceles(61, 281, 150, 'deep sky blue', 90)
+triangle_right_isosceles(40, 121, 107, 'dark violet', 135)
+triangle_right_isosceles(88, 233, 59, 'yellow', 135)
+parallelogram(167, 152, 61, 44, 45,'lawn green', 135)
 
-# Creation of the rocket
+"Creation of the rocket"
 triangle(-200, -100, -180, -120, -220, -120, fig_color='violet')
 triangle(-220, -125, -180, -125, -180, -165, 'deep sky blue')
 triangle(-220, -130, -220, -210, -180, -170, 'yellow')
@@ -163,5 +162,23 @@ square(28, -220, -240, rotation=45, fig_color='orange')
 triangle(-242, -242, -240, -282, -222, -262, fig_color='dark violet')
 triangle(-178, -258, -140, -258, -178, -215, 'lawn green')
 triangle(-140, -282, -178, -260, -140, -260, 'lawn green')
+
+'''Creation of the boat'''
+square(42, -101, 99, rotation=45, fig_color='orange red')
+triangle_right_isosceles(88, -103, 132, 'red', 90)
+triangle_right_isosceles(40, -133, 96, 'violet')
+triangle_right_isosceles(61, -150, 21, 'deep sky blue', 180)
+triangle_right_isosceles(40, -164, 198, 'dark violet', -135)
+triangle_right_isosceles(88, -169, 83, 'yellow', 135)
+parallelogram(-156, 21, 61, 44, 45, 'lawn green', 135)
+
+'''Creation of the SQUARE'''
+square(42, -100, -100, rotation=45, fig_color='orange red')
+triangle_right_isosceles(88, -132, -98, 'red', 180)
+triangle_right_isosceles(40, -132, -102, 'violet')
+triangle_right_isosceles(61, -70, -165, 'deep sky blue', 135)
+triangle_right_isosceles(40, -98, -68, 'dark violet', -90)
+triangle_right_isosceles(88, -135, -100, 'yellow', 90)
+parallelogram(-195, -165, 61, 44, 45, 'lawn green')
 
 done()
