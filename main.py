@@ -13,7 +13,7 @@ def square(side, position_x, position_y, fig_color='black', rotation=0):
     :param position_y: coordinate y in the middle of the square
     :param side: side length of a square
     :param fig_color: fills the figure with the selected color
-    :param rotation: additional rotation angle
+    :param rotation: the rotation angle that determines the position of the figure
     :return: None
     '''
     sq = Turtle()
@@ -76,6 +76,15 @@ def triangle(position_x1, position_y1, position_x2, position_y2, position_x3, po
 
 
 def triangle_perf(side, position_x, position_y, fig_color='black', rotation_angle=0):
+    '''
+    Function, drawing triangle.
+    :param side: side length of a perfect triangle
+    :param position_x: coordinate x in the middle of the perfect triangle
+    :param position_y: coordinate y in the middle of the perfect triangle
+    :param fig_color: fills the figure with the selected color
+    :param rotation_angle: the rotation angle that determines the position of the figure
+    :return: None
+    '''
     tri = Turtle()
     tri.speed(0)
     tri.hideturtle()
@@ -101,9 +110,19 @@ def triangle_perf(side, position_x, position_y, fig_color='black', rotation_angl
     tri.penup()
 
 
-def parallelogram(x, y, side_horiz, side_angled, paral_angle, fig_color='black', rotation_angle=0):
+def parallelogram(position_x, position_y, side_horiz, side_angled, paral_angle, fig_color='black', rotation_angle=0):
+    '''
+    Function, drawing triangle.
+    :param position_x: upper left coordinate x
+    :param position_y: upper left coordinate y
+    :param side_horiz: lenght of the horizontal line of the parallelogram
+    :param side_angled: lenght of the line at an angle
+    :param fig_color: fills the figure with the selected color
+    :param rotation_angle: the rotation angle that determines the position of the figure
+    :return: None
+    '''
     par = Turtle()
-    par.speed(0)
+    par.speed(1)
     par.hideturtle()
     par.color(fig_color)
 
@@ -125,13 +144,6 @@ def parallelogram(x, y, side_horiz, side_angled, paral_angle, fig_color='black',
     par.end_fill()
     par.penup()
 
-
-penup()
-goto(-50, -50)
-pendown()
-begin_fill()
-circle(20)
-end_fill()
 
 '''Creation of the fish'''
 square(42, 200, 200, rotation=45, fig_color='orange red')
