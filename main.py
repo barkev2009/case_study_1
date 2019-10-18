@@ -151,7 +151,7 @@ triangle_right_isosceles(40, 126, 148, 'violet', -45)
 triangle_right_isosceles(61, 281, 150, 'deep sky blue', 90)
 triangle_right_isosceles(40, 121, 107, 'dark violet', 135)
 triangle_right_isosceles(88, 233, 59, 'yellow', 135)
-parallelogram(167, 152, 61, 44, 45,'lawn green', 135)
+parallelogram(167, 152, 61, 44, 45, 'lawn green', 135)
 
 "Creation of the rocket"
 triangle(-200, -100, -180, -120, -220, -120, fig_color='violet')
@@ -173,12 +173,12 @@ triangle_right_isosceles(88, -169, 83, 'yellow', 135)
 parallelogram(-156, 21, 61, 44, 45, 'lawn green', 135)
 
 '''Creation of the SQUARE'''
-square(42, -100, -100, rotation=45, fig_color='orange red')
-triangle_right_isosceles(88, -132, -98, 'red', 180)
-triangle_right_isosceles(40, -132, -102, 'violet')
-triangle_right_isosceles(61, -70, -165, 'deep sky blue', 135)
-triangle_right_isosceles(40, -98, -68, 'dark violet', -90)
-triangle_right_isosceles(88, -135, -100, 'yellow', 90)
-parallelogram(-195, -165, 61, 44, 45, 'lawn green')
+square(42, -70, -100, rotation=45, fig_color='orange red')
+triangle_right_isosceles(88, -102, -98, 'red', 180)
+triangle_right_isosceles(40, -102, -102, 'violet')
+triangle_right_isosceles(61, -40, -165, 'deep sky blue', 135)
+triangle_right_isosceles(40, -68, -68, 'dark violet', -90)
+triangle_right_isosceles(88, -105, -100, 'yellow', 90)
+parallelogram(-165, -165, 61, 44, 45, 'lawn green')
 
 done()
