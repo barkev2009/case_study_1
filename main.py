@@ -1,7 +1,7 @@
 # Case-study #1
-# Developers:   Kapinos A. (___),
-#               Kovshov G. (___),
-#               Pankova J. (___)
+# Developers:   Kapinos A. (35%),
+#               Kovshov G. (40%),
+#               Pankova J. (25%)
 from turtle import *
 import math
 
@@ -30,7 +30,7 @@ def square(side, position_x, position_y, fig_color='black', rotation=0):
     sq.forward(side / 2)
     sq.right(90)
 
-    # actually drawing the triangle
+    # actually drawing the square
     sq.pendown()
     sq.begin_fill()
     sq.forward(side)
@@ -153,12 +153,12 @@ triangle_right_isosceles(40, 121, 107, 'dark violet', 135)
 triangle_right_isosceles(88, 233, 59, 'yellow', 135)
 parallelogram(167, 152, 61, 44, 45, 'lawn green', 135)
 
-"Creation of the rocket"
+'''Creation of the rocket'''
+square(28, -220, -240, rotation=45, fig_color='orange red')
 triangle(-200, -100, -180, -120, -220, -120, fig_color='violet')
 triangle(-220, -125, -180, -125, -180, -165, 'deep sky blue')
 triangle(-220, -130, -220, -210, -180, -170, 'yellow')
 triangle(-220, -215, -180, -175, -180, -255, 'red')
-square(28, -220, -240, rotation=45, fig_color='orange red')
 triangle(-242, -242, -240, -282, -222, -262, fig_color='dark violet')
 triangle(-178, -258, -140, -258, -178, -215, 'lawn green')
 triangle(-140, -282, -178, -260, -140, -260, 'lawn green')
@@ -182,12 +182,21 @@ triangle_right_isosceles(88, -105, -100, 'yellow', 90)
 parallelogram(-165, -165, 61, 44, 45, 'lawn green')
 
 '''Creation of the bee'''
-square(42, -100, 300, rotation=45, fig_color='orange red')
-triangle_right_isosceles(40, -53, 260, 'violet', 180)
-triangle_right_isosceles(40, -23, 285, 'dark violet')
-triangle_right_isosceles(80, -20, 285, 'yellow', -90)
-triangle_right_isosceles(80, 96, 285, 'red', 90)
-parallelogram(39, 342, 61, 44, 45,  fig_color='lawn green')
-triangle_right_isosceles(50, 0, 377, 'deep sky blue')
+square(42, 300, 0, rotation=45, fig_color='orange red')
+triangle_right_isosceles(40, 347, -40, 'violet', 180)
+triangle_right_isosceles(40, 377, -15, 'dark violet')
+triangle_right_isosceles(80, 380, -15, 'yellow', -90)
+triangle_right_isosceles(80, 496, -15, 'red', 90)
+parallelogram(439, 42, 61, 44, 45,  fig_color='lawn green')
+triangle_right_isosceles(50, 400, 77, 'deep sky blue')
+
+'''Creation of the squirrel'''
+square(42, 170, -100, fig_color='orange red')
+triangle_right_isosceles(88, 99, -68, 'red', 45)
+triangle_right_isosceles(40, 177, -47, 'violet')
+triangle_right_isosceles(61, 56, -21, 'deep sky blue')
+triangle_right_isosceles(40, 136, -185, 'dark violet', -90)
+triangle_right_isosceles(88, 103, -125, 'yellow', -45)
+parallelogram(42, -166, 61, 44, 45, 'lawn green', 90)
 
 done()
