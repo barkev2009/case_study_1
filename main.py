@@ -154,4 +154,14 @@ triangle(165, 200, 135, 200, 135, 170, 'violet')
 triangle(130, 170, 130, 200, 100, 170, 'dark violet')
 parallelogram(100, 235, 44, 35, 45, rotation_angle=-45, fig_color='lawn green')
 
+# Creation of the rocket
+triangle(-200, -100, -180, -120, -220, -120, fig_color='violet')
+triangle(-220, -125, -180, -125, -180, -165, 'deep sky blue')
+triangle(-220, -130, -220, -210, -180, -170, 'yellow')
+triangle(-220, -215, -180, -175, -180, -255, 'pink')
+square(28, -220, -240, rotation=45, fig_color='orange')
+triangle(-242, -242, -240, -282, -222, -262, fig_color='dark violet')
+triangle(-178, -258, -140, -258, -178, -215, 'lawn green')
+triangle(-140, -282, -178, -260, -140, -260, 'lawn green')
+
 done()
